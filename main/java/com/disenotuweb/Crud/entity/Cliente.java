@@ -11,7 +11,7 @@ import java.util.Date;
 @Table(name="clientes")
 public class Cliente implements Serializable {
     
-    private static final long serialVersionUID= 7383224828869021596L;
+     private static final long serialVersionUID= 7383224828869021596L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

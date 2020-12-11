@@ -18,7 +18,7 @@ public class IClienteServiceImpl implements IClienteService{
     public List<Cliente> getClientes() {
 
         return (List<Cliente>) clienteDao.findAll();
-    }// implementacion
+    }/** implementacion**/
 
     @Override
     public Cliente getCliente(Long id) {
