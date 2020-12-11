@@ -14,8 +14,21 @@ public class IClienteServiceImpl implements IClienteService{
     @Autowired// inyectamos
     public IClientesDao clienteDao;
     @Override
-    public List<Cliente> findAll() {
+    //public List<Cliente> findAll() {
+    public List<Cliente> getClientes() {
+
         return (List<Cliente>) clienteDao.findAll();
     }// implementacion
+
+    @Override
+    public Cliente getCliente(Long id) {
+        return clienteDao.findById(id).orElse(null);
+    }
+
+    @Override
+    public Cliente guardar(Cliente cliente) {
+        return clienteDao.save(cliente);// sirve para guaradar como para actualizar los datos
+    }
+
 
 }
